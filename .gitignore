@@ -1,6 +1,7 @@
 # --- Archivos y carpetas de Visual Studio / .NET ---
 .vs/
 *.user
+!OrellanaGerardo20260212.slnLaunch.user
 *.suo
 *.userosscache
 *.sln.docstates

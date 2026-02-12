@@ -1,0 +1,17 @@
+[
+  {
+    "Name": "Nuevo perfil",
+    "Projects": [
+      {
+        "Path": "Evaluacion.client\\Evaluacion.client.esproj",
+        "Action": "Start",
+        "DebugTarget": "localhost (Chrome)"
+      },
+      {
+        "Path": "Evaluacion.Server\\Evaluacion.Server.csproj",
+        "Action": "Start",
+        "DebugTarget": "Evaluacion.Server"
+      }
+    ]
+  }
+]
