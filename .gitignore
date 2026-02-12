@@ -1,0 +1,49 @@
+# --- Archivos y carpetas de Visual Studio / .NET ---
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+bin/
+obj/
+Debug/
+Release/
+launchSettings.json
+
+# Archivos de publicación / compilación
+publish/
+artifacts/
+
+# Archivos de bloqueo y cache
+*.lock.json
+*.ide
+
+# --- Paquetes / dependencias ---
+packages/
+*.nupkg
+*.snupkg
+
+# --- Logs ---
+*.log
+logs/
+
+# --- Archivos temporales / sistema ---
+*.tmp
+*.temp
+*.bak
+*.swp
+*.DS_Store
+Thumbs.db
+
+# --- Proyecto Angular (Evaluacion.client) ---
+Evaluacion.client/node_modules/
+Evaluacion.client/dist/
+Evaluacion.client/.angular/
+Evaluacion.client/.env
+Evaluacion.client/.env.*.local
+
+# Cobertura de pruebas / reportes
+TestResults/
+coverage/
+
