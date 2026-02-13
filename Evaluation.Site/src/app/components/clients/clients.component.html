@@ -1,61 +1,50 @@
-<div class="max-w-2xl mx-auto py-8 px-4">
-  <h1 class="text-xl font-semibold text-gray-900 mb-6">Consulta de clientes</h1>
+<div class="container">
+  <h1>Consulta de clientes</h1>
 
-  <div class="flex gap-2 mb-6">
+  <div class="search-row">
     <input
       id="nameFilter"
       type="text"
       [(ngModel)]="nameFilter"
       placeholder="Nombre del cliente"
       (keydown.enter)="onSearch()"
-      class="flex-1 rounded border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:border-gray-600"
-      />
-      <button
-        type="button"
-        (click)="onSearch()"
-        class="rounded border border-gray-800 bg-gray-900 px-4 py-2 text-sm text-white hover:bg-gray-800"
-        >
-        Buscar
-      </button>
-      <button
-        type="button"
-        (click)="onClear()"
-        class="rounded border border-gray-300 bg-white px-4 py-2 text-sm hover:bg-gray-50"
-        >
-        Limpiar
-      </button>
+    />
+    <div class="buttons">
+      <button type="button" (click)="onSearch()">Buscar</button>
+      <button type="button" (click)="onClear()" class="secondary">Limpiar</button>
     </div>
-
-    @if (loading) {
-      <p class="text-sm text-gray-500">Cargando...</p>
-    }
-
-    @if (!loading && clients.length) {
-      <table class="w-full border border-gray-200 rounded overflow-hidden">
-        <thead>
-          <tr class="bg-gray-100">
-            <th class="border-b border-gray-200 px-3 py-2 text-left text-sm font-semibold text-gray-800">País</th>
-            <th class="border-b border-gray-200 px-3 py-2 text-left text-sm font-semibold text-gray-800">Id</th>
-            <th class="border-b border-gray-200 px-3 py-2 text-left text-sm font-semibold text-gray-800">Nombre</th>
-            <th class="border-b border-gray-200 px-3 py-2 text-left text-sm font-semibold text-gray-800">Teléfono</th>
-            <th class="border-b border-gray-200 px-3 py-2 text-left text-sm font-semibold text-gray-800">Categoría</th>
-          </tr>
-        </thead>
-        <tbody>
-          @for (c of clients; track c) {
-            <tr class="border-b border-gray-100 last:border-0 hover:bg-gray-50">
-              <td class="px-3 py-2 text-sm">{{ c.country }}</td>
-              <td class="px-3 py-2 text-sm">{{ c.id }}</td>
-              <td class="px-3 py-2 text-sm">{{ c.name }}</td>
-              <td class="px-3 py-2 text-sm">{{ c.phone }}</td>
-              <td class="px-3 py-2 text-sm">{{ c.category }}</td>
-            </tr>
-          }
-        </tbody>
-      </table>
-    }
-
-    @if (!loading && !clients.length) {
-      <p class="text-sm text-gray-500 mt-4">No se encontraron clientes.</p>
-    }
   </div>
+
+  @if (loading) {
+    <p>Cargando...</p>
+  }
+
+  @if (!loading && clients.length) {
+    <table>
+      <thead>
+        <tr>
+          <th>País</th>
+          <th>Id</th>
+          <th>Nombre</th>
+          <th>Teléfono</th>
+          <th>Categoría</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (c of clients; track c) {
+          <tr>
+            <td>{{ c.country }}</td>
+            <td>{{ c.id }}</td>
+            <td>{{ c.name }}</td>
+            <td>{{ c.phone }}</td>
+            <td>{{ c.category }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  }
+
+  @if (!loading && !clients.length) {
+    <p>No se encontraron clientes.</p>
+  }
+</div>
