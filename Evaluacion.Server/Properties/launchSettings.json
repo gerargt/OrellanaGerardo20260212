@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "Evaluacion.Server": {
+    "Evaluacion.Service": {
       "commandName": "Project",
       "launchBrowser": false,
       "environmentVariables": {

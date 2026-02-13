@@ -1,7 +1,7 @@
 <Solution>
-  <Project Path="Evaluacion.client/Evaluacion.client.esproj">
+  <Project Path="Evaluation.Site/Evaluation.Site.esproj">
     <Build />
     <Deploy />
   </Project>
-  <Project Path="Evaluacion.Server/Evaluacion.Server.csproj" />
+  <Project Path="Evaluacion.Server/Evaluacion.Service.csproj" />
 </Solution>

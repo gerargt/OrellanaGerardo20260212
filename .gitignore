@@ -2,7 +2,7 @@
 .vs/
 
 *.user
-!OrellanaGerardo20260212.slnLaunch.user
+!AbarcaJuan20260212.slnLaunch.user
 *.suo
 *.userosscache
 *.sln.docstates
@@ -38,12 +38,12 @@ logs/
 *.DS_Store
 Thumbs.db
 
-# --- Proyecto Angular (Evaluacion.client) ---
-Evaluacion.client/node_modules/
-Evaluacion.client/dist/
-Evaluacion.client/.angular/
-Evaluacion.client/.env
-Evaluacion.client/.env.*.local
+# --- Proyecto Angular (Evaluation.Site) ---
+Evaluation.Site/node_modules/
+Evaluation.Site/dist/
+Evaluation.Site/.angular/
+Evaluation.Site/.env
+Evaluation.Site/.env.*.local
 
 # Cobertura de pruebas / reportes
 TestResults/

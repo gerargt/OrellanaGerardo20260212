@@ -1,4 +1,4 @@
-namespace Evaluacion.Server.Entities;
+namespace Evaluacion.Service.Entities;
 
 public class Client
 {

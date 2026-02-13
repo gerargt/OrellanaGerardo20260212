@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Evaluacion.client": {
+    "Evaluation.Site": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/Evaluacion.client",
+            "outputPath": "dist/Evaluation.Site",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Evaluacion.client:build:production"
+              "buildTarget": "Evaluation.Site:build:production"
             },
             "development": {
-              "buildTarget": "Evaluacion.client:build:development"
+              "buildTarget": "Evaluation.Site:build:development"
             }
           },
           "defaultConfiguration": "development",

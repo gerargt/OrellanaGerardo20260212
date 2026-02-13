@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using Evaluacion.Server.Entities;
+using Evaluacion.Service.Entities;
 
-namespace Evaluacion.Server.Data;
+namespace Evaluacion.Service.Data;
 
 public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
 {

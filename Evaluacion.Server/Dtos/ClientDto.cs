@@ -1,4 +1,4 @@
-namespace Evaluacion.Server.Dtos;
+namespace Evaluacion.Service.Dtos;
 
 public class ClientDto
 {

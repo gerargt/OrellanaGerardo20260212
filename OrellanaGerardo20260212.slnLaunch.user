@@ -1,15 +1,1 @@
-[
-  {
-    "Name": "Nuevo perfil",
-    "Projects": [
-      {
-        "Path": "Evaluacion.Server\\Evaluacion.Server.csproj",
-        "Action": "Start"
-      },
-      {
-        "Path": "Evaluacion.client\\Evaluacion.client.esproj",
-        "Action": "Start"
-      }
-    ]
-  }
-]
+[{"Name":"Nuevo perfil","Projects":[{"Path":"Evaluacion.Server\\Evaluacion.Service.csproj","Action":"Start"},{"Path":"Evaluation.Site\\Evaluation.Site.esproj","Action":"Start"}]}]
