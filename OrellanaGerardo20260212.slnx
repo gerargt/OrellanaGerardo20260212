@@ -3,5 +3,5 @@
     <Build />
     <Deploy />
   </Project>
-  <Project DefaultStartup="true" Path="Evaluacion.Server/Evaluacion.Server.csproj" />
+  <Project Path="Evaluacion.Server/Evaluacion.Server.csproj" />
 </Solution>
