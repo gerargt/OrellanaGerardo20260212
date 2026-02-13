@@ -20,10 +20,10 @@ export class CustomerApiService {
 
   constructor(private httpClient: HttpClient) {}
 
-  getList(filterByName?: string): Observable<CustomerItem[]> {
+  getList(clientName?: string): Observable<CustomerItem[]> {
     let queryParams = new HttpParams();
-    if (filterByName && filterByName.trim() !== '') {
-      queryParams = queryParams.set('name', filterByName.trim());
+    if (clientName && clientName.trim() !== '') {
+      queryParams = queryParams.set('name', clientName.trim());
     }
     const endpoint = `${this.apiHost}/api/clients`;
     return this.httpClient.get<CustomerItem[]>(endpoint, { params: queryParams });

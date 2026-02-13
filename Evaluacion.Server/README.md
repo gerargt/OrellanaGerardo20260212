@@ -1,31 +1,30 @@
-### 1. Configurar proyectos de inicio múltiples (recomendado)
+# Evaluacion.Service
 
-Para que se ejecuten el cliente y el servidor al pulsar **Iniciar (F5)**:
+API en ASP.NET Core para la gestión de clientes.
 
-1. En el **Explorador de soluciones**, clic derecho en la **Solución**.
-2. Selecciona **Configurar proyectos de inicio** (o **Set Startup Projects**).
-3. Elige **Proyectos de inicio múltiples**.
-4. Para **Evaluacion.Service** y **Evaluation.Site**, establece la acción en **Iniciar**.
-5. Asegúrate de que **Evaluacion.Service** quede arriba en la lista para que el API arranque primero (opcional pero recomendado).
-6. Pulsa **Aceptar**.
+## Versiones
 
-Así, al ejecutar la solución se iniciarán **Client + Server** a la vez.
+- .NET 10
+- ASP.NET Core 10
+- Entity Framework Core 10.x
 
-### 2. Ejecutar la aplicación
+## Requisitos
 
-- Pulsa **F5** o el botón **Iniciar** para ejecutar en modo depuración.
-- O **Ctrl+F5** para ejecutar sin depurar.
+- .NET 10 SDK
+- SQL Server (o LocalDB)
 
-El cliente Angular se sirve normalmente por el proxy del servidor (por ejemplo, `https://localhost:7245` o el puerto configurado en el proyecto). La API estará disponible en la misma base o en el puerto indicado en `launchSettings.json`.
+## Configuración
 
-## Estructura de la solución
+1. Cadena de conexión en `appsettings.json` (o `appsettings.Development.json`): clave `ConnectionStrings:DefaultConnection`.
+2. Script de base de datos: ejecutar `DB.sql` para crear la base y la tabla.
 
-| Proyecto              | Descripción                    |
-|-----------------------|--------------------------------|
-| **Evaluacion.Service** | API ASP.NET Core (backend)     |
-| **Evaluation.Site**    | Aplicación Angular (frontend)   |
+## Ejecución
 
-## Notas
+```bash
+dotnet run
+```
 
-- La URL base de la API para el cliente está en `Evaluation.Site/src/environments/environment.ts` (por ejemplo, `https://localhost:7245`). Debe coincidir con la URL del servidor en `Evaluacion.Service/Properties/launchSettings.json`.
-- Si cambias el puerto del servidor, actualiza también `apiBaseUrl` en `environment.ts`.
+Por defecto la API queda en:
+- HTTPS: `https://localhost:7245`
+- HTTP: `http://localhost:5245`
+
