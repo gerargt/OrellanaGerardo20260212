@@ -1,3 +1,9 @@
+## Versiones de librerías
+
+Requisito: [.NET SDK 10.0](https://dotnet.microsoft.com/download) instalado.
+
+---
+
 ### 1. Configurar proyectos de inicio múltiples (recomendado)
 
 Para que se ejecuten el cliente y el servidor al pulsar **Iniciar (F5)**:
@@ -15,15 +21,6 @@ Así, al ejecutar la solución se iniciarán **Client + Server** a la vez.
 
 - Pulsa **F5** o el botón **Iniciar** para ejecutar en modo depuración.
 - O **Ctrl+F5** para ejecutar sin depurar.
-
-El cliente Angular se sirve normalmente por el proxy del servidor (por ejemplo, `https://localhost:60272` o el puerto configurado en el proyecto). La API estará disponible en la misma base o en el puerto indicado en `launchSettings.json`.
-
-## Estructura de la solución
-
-| Proyecto              | Descripción                    |
-|-----------------------|--------------------------------|
-| **Evaluacion.Server** | API ASP.NET Core (backend)     |
-| **Evaluacion.client** | Aplicación Angular (frontend)   |
 
 ## Notas
 

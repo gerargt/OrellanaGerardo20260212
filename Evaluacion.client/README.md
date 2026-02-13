@@ -1,6 +1,10 @@
 # Orellanagerardo20260212Client
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.19.
+## Versiones de librerías
+
+**Requisito:** Node.js **20 o superior**
+
+Instalar dependencias con `npm install` antes de ejecutar el proyecto.
 
 ## Development server
 
