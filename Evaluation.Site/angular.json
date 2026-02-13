@@ -77,7 +77,8 @@
           },
           "defaultConfiguration": "development",
           "options": {
-            "port": 4200
+            "port": 4200,
+            "ssl": true
           }
         },
         "extract-i18n": {
