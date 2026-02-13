@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { ClientsComponent } from './components/clients/clients.component';
+import { CustomerListComponent } from './views/customer-list/customer-list.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ClientsComponent, HttpClientTestingModule],
+      imports: [CustomerListComponent, HttpClientTestingModule],
       declarations: [AppComponent],
     }).compileComponents();
   });
@@ -20,6 +20,6 @@ describe('AppComponent', () => {
   it('should have the correct title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toBe('Consulta de clientes');
+    expect(app.pageTitle).toBe('Consulta de clientes');
   });
 });

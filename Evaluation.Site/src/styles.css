@@ -1,16 +1,17 @@
 * { box-sizing: border-box; }
 body { margin: 16px; font-family: sans-serif; font-size: 14px; }
 
-.container { max-width: 600px; margin: 0; }
+.screen-container { max-width: 600px; margin: 0; }
 h1 { font-size: 1.2em; margin-bottom: 1em; }
 input, button { padding: 6px 10px; font-size: 14px; }
 input { border: 1px solid #999; width: 100%; max-width: 300px; }
 button { border: 1px solid #333; background: #333; color: #fff; cursor: pointer; }
-button.secondary { background: #fff; color: #333; }
-table { width: auto; border-collapse: collapse; margin-top: 1em; }
-th, td { border: 1px solid #ccc; padding: 6px 8px; text-align: left; }
-th { background: #eee; }
-.search-row { margin-bottom: 1em; }
-.search-row input { display: block; margin-bottom: 8px; }
-.search-row .buttons { margin-top: 4px; }
-.search-row .buttons button { margin-right: 4px; }
+button.btn-alt { background: #fff; color: #333; }
+.data-grid { width: auto; border-collapse: collapse; margin-top: 1em; }
+.data-grid th, .data-grid td { border: 1px solid #ccc; padding: 6px 8px; text-align: left; }
+.data-grid th { background: #eee; }
+.filter-area { margin-bottom: 1em; }
+.filter-area input { display: block; margin-bottom: 8px; }
+.filter-area .action-buttons { margin-top: 4px; }
+.filter-area .action-buttons button { margin-right: 4px; }
+.msg { margin: 0.5em 0; }

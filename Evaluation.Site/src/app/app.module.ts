@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ClientsComponent } from './components/clients/clients.component';
+import { CustomerListComponent } from './views/customer-list/customer-list.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +16,7 @@ import { ClientsComponent } from './components/clients/clients.component';
     HttpClientModule,
     FormsModule,
     AppRoutingModule,
-    ClientsComponent
+    CustomerListComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   standalone: false
 })
 export class AppComponent {
-  title = 'Consulta de clientes';
+  pageTitle = 'Consulta de clientes';
 }

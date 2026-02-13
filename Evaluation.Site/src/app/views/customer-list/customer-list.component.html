@@ -1,0 +1,50 @@
+<div class="screen-container">
+  <h1>Consulta de clientes</h1>
+
+  <div class="filter-area">
+    <input
+      id="searchInput"
+      type="text"
+      [(ngModel)]="searchText"
+      placeholder="Nombre del cliente"
+      (keydown.enter)="runSearch()"
+    />
+    <div class="action-buttons">
+      <button type="button" (click)="runSearch()">Buscar</button>
+      <button type="button" (click)="clearFilters()" class="btn-alt">Limpiar</button>
+    </div>
+  </div>
+
+  @if (isBusy) {
+    <p class="msg">Cargando...</p>
+  }
+
+  @if (!isBusy && listData.length) {
+    <table class="data-grid">
+      <thead>
+        <tr>
+          <th>País</th>
+          <th>Id</th>
+          <th>Nombre</th>
+          <th>Teléfono</th>
+          <th>Categoría</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (item of listData; track item) {
+          <tr>
+            <td>{{ item.country }}</td>
+            <td>{{ item.id }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.phone }}</td>
+            <td>{{ item.category }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  }
+
+  @if (!isBusy && !listData.length) {
+    <p class="msg">No se encontraron clientes.</p>
+  }
+</div>
