@@ -9,7 +9,6 @@ bin/
 obj/
 Debug/
 Release/
-launchSettings.json
 
 # Archivos de publicación / compilación
 publish/
