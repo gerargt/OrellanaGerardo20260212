@@ -18,20 +18,20 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
       entity.HasKey(c => new { c.Country, c.Id });
 
       entity.Property(c => c.Country)
-                  .HasMaxLength(100)
-                  .IsRequired();
+        .HasMaxLength(100)
+        .IsRequired();
 
       entity.Property(c => c.Id)
-                  .HasMaxLength(50)
-                  .IsRequired();
+        .HasMaxLength(50)
+        .IsRequired();
 
       entity.Property(c => c.Name)
-                  .HasMaxLength(150)
-                  .IsRequired();
+        .HasMaxLength(150)
+        .IsRequired();
 
       entity.Property(c => c.Phone)
-                  .HasMaxLength(30)
-                  .IsRequired();
+        .HasMaxLength(30)
+        .IsRequired();
     });
   }
 }
