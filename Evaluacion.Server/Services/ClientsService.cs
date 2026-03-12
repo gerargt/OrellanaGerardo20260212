@@ -11,6 +11,7 @@ public class ClientsService(AppDbContext context) : IClientsService
     nameFilter = string.IsNullOrWhiteSpace(nameFilter) ? null : nameFilter.Trim();
 
     var query = context.Clients
+      .Include(c => c.Category)
       .AsNoTracking()
       .AsQueryable();
 
@@ -28,7 +29,12 @@ public class ClientsService(AppDbContext context) : IClientsService
         Name = c.Name,
         Phone = c.Phone,
         Country = c.Country,
-        CategoryId = c.CategoryId
+        CategoryId = c.CategoryId,
+        Category = new CategoryDto
+        {
+          Id = c.CategoryId,
+          Name = c.Category.Name
+        }
       })
       .ToListAsync(cancellationToken);
   }
