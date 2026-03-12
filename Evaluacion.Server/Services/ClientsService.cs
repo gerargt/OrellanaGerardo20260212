@@ -20,7 +20,7 @@ public class ClientsService(AppDbContext context) : IClientsService
     }
 
     return await query
-      .OrderByDescending(c => c.Category)
+      .OrderByDescending(c => c.CategoryId)
       .ThenBy(c => c.Name)
       .Select(c => new ClientDto
       {
@@ -28,7 +28,7 @@ public class ClientsService(AppDbContext context) : IClientsService
         Name = c.Name,
         Phone = c.Phone,
         Country = c.Country,
-        Category = c.Category
+        CategoryId = c.CategoryId
       })
       .ToListAsync(cancellationToken);
   }

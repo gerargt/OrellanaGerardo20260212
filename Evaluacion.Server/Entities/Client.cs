@@ -1,11 +1,11 @@
 namespace Evaluacion.Server.Entities;
 
-public class Client
+public class Client : BaseEntity
 {
   public string Country { get; set; } = null!;
-  public string Id { get; set; } = null!;
   public string Name { get; set; } = null!;
   public string Phone { get; set; } = null!;
-  public int Category { get; set; }
+  public int CategoryId { get; set; }
+  public virtual Category Category { get; set; } = null!;
 }
 

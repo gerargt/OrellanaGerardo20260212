@@ -1,0 +1,19 @@
+---
+description: All project code must be written in English
+alwaysApply: true
+---
+
+# Code in English
+
+All code in this project must be in English.
+
+- **Identifiers**: Class names, methods, properties, variables, parameters, and constants must use English names.
+- **Comments and documentation**: Write comments, XML docs, and README in English.
+- **Strings in code**: User-facing strings and log messages should be in English (or use resources for localization).
+- **Database**: Table and column names, constraint names, and SQL scripts should use English.
+
+Examples:
+- Class: `Category` (not `Categoria`)
+- Property: `Name` (not `Nombre`)
+- Table: `Category` (not `Categoria`)
+- Comment: `// CategoryId 1 = Premium, 2 = Standard`
